@@ -18,8 +18,8 @@ public class Moeda : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
-            
         {
+           FindObjectOfType<GameManager>().SubtrairMoedas(valor:1);
             Destroy(gameObject);
         } 
     }
